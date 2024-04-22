@@ -1,43 +1,36 @@
 "use client"
-import React, { useEffect, useState } from 'react';
-import axios from "axios";
+import React, { useState } from 'react';
+import Link from "next/link";
 
 const page = () => {
-  const [city, setcity] = useState("Delhi");
-  const [weatherdata, setweatherdata] = useState([]);
-  const api_key = "594d1f7675f4917a6efadcaf50d34ca4";
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
+  const [password, setpassword] = useState("");
+  const [nextlink, setnextlink] = useState("");
+  const [loginbutton, setloginbutton] = useState("LOGIN")
 
-  const apiwork = async () => {
-    try
+  const authentication=()=>{
+    if(password==="0908")
     {
-      const response = await axios.get(url);
-      setweatherdata(response.data);
-      weatherdata.push(response.data);
-      console.log(weatherdata);
+      setloginbutton(<Link className='pass' href="Login">START</Link>);
+      
     }
-    catch(error)
+    else
     {
-      console.log(error);
+      setnextlink(<div className='error'>Wrong Pin! Try Again.</div>)
     }
-  } 
-
-  useEffect(()=>{
-    apiwork();
-  },[]);
-
+  }
 
   return (
     <>
-    <h1 onClick={(e)=>{console.log("Don't Play With My Dick Bitch.!")}}>Weather App </h1>
-
-    <div>
-      {weatherdata.map((elem,i)=>{
-        return <div key={i}>{elem}</div>
-      })}
+    <div className='container'>
+      <div>
+      <input onChange={(e)=>{setpassword(e.target.value);}} type='password' placeholder='Enter PIN' maxlength='4' />
+      </div>
+      <div><button onClick={authentication}>{loginbutton}</button></div>
+      <div>{nextlink}</div>
     </div>
     </>
+      
   )
 }
 
-export default page
+export default page;
