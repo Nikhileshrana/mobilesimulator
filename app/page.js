@@ -10,7 +10,7 @@ const page = () => {
   const authentication=()=>{
     if(password==="0908")
     {
-      setloginbutton(<Link className='pass' href="Login">START</Link>);
+      setloginbutton(<Link className='pass' href="Login">Click again to Enter.</Link>);
       
     }
     else
@@ -19,11 +19,14 @@ const page = () => {
     }
   }
 
+  let inputentered =  document.getElementById("inputbox");
+
+
   return (
     <>
     <div className='container'>
       <div>
-      <input onChange={(e)=>{setpassword(e.target.value);}} type='password' placeholder='Enter PIN' maxlength='4' />
+      <input onChange={(e)=>{setpassword(e.target.value);}} type='password' id='inputbox' placeholder='Enter PIN' maxlength='4' />
       </div>
       <div><button onClick={authentication}>{loginbutton}</button></div>
       <div>{nextlink}</div>
