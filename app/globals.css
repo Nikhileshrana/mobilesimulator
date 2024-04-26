@@ -145,3 +145,30 @@ body
     color: black;
     font-size: large;
 }
+
+.weather-container
+{
+    border: 1px red solid;
+    width: 90%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    margin: 0 auto;
+}
+
+.weather-container>div
+{
+    display: flex;
+    align-self: center;
+}
+
+@media screen and(max-width:600px)
+{
+    .weather-container
+    {
+        border:20px red solid;
+    }
+}
