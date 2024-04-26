@@ -11,7 +11,6 @@ const page = () => {
     if(password==="0908")
     {
       setloginbutton(<Link className='pass' href="Login">Click again to Enter.</Link>);
-      
     }
     else
     {

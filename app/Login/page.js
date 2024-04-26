@@ -12,9 +12,6 @@ const page = () => {
   const [weatherdata, setweatherdata] = useState([]);
   const api_key = "594d1f7675f4917a6efadcaf50d34ca4";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
-  const [weathertype, setweathertype] = useState([]);
-
-  const [weathercity, setweathercity] = useState("");
 
   const apiwork = async () => {
     try
