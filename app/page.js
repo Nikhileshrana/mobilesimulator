@@ -30,6 +30,7 @@ const page = () => {
       <div><button onClick={authentication}>{loginbutton}</button></div>
       <div>{nextlink}</div>
     </div>
+    
     </>
       
   )

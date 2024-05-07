@@ -36,7 +36,6 @@ const page = () => {
     <>
       <Logout />
 
-
       <div Style="display:flex; padding:5vw 5vw; gap:1vw;">
         <div id='cityname'><input placeholder='City Name' onChange={(e)=>{setinitialcity(e.target.value)}}/></div>
         <div id='submitcity'><button onClick={()=>{setcity(initialcity); console.log(city); apiwork();}}>Double Click to Submit</button></div>

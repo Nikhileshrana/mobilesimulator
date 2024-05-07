@@ -11,7 +11,7 @@ const Weather = (props) => {
 
       <div>
         <div>TEMP</div>
-        <div>{props.temp}</div>
+        <div>{props.temp-273}</div>
       </div>
 
       <div>
