@@ -18,8 +18,6 @@ const page = () => {
     }
   }
 
-  let inputentered =  document.getElementById("inputbox");
-
 
   return (
     <>

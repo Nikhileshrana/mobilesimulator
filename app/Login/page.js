@@ -1,8 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import Weather from "@/Components/Weather"
-import Logout from "@/Components/Logout"
+import Weather from "@/Components/Weather";
+import Logout from "@/Components/Logout";
 
 const page = () => {
 
